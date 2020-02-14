@@ -9,3 +9,8 @@ Idea: An App which is a social platform for all machine learning enthusiast wher
 1. A social platform which will allow user to login via email. 
 2. Users can post images and text. 
 3. Users can read post of other users.
+4. Users can read about different machine learning algorithms from the best resources. 
+5. Users can send message to other user.
+6. A fun ML section which will use ML-Kit and user will be able to use machine learning feature to classify images and many more.
+
+Basically it will be social app encorporated with machine learning features.
