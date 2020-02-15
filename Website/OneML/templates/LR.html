@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="ML Live">
+    <title>One ML</title>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/foundation.min.css'%}">
+    <link rel="stylesheet" href="{% static '/app.css'%}">
+</head>
+<style>
+body {
+ background-image: url("");
+ background-color: #fff;
+}
+label{
+    color:black;
+}
+</style>
+<body >
+
+
+
+
+<nav class="navbar fixed-top  navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand" href="http://localhost:8000/" style="font-size: 20;color: white    ">One ML</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#particle-js" href="http://localhost:8000/" style="font-size: 16;color: white">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="font-size: 16;color: white" href="http://localhost:8000/linearRegression">Linear Regression</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="font-size: 16;color: white" href="http://localhost:8000/imageClassification">Image Classification</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="font-size: 16;color: white" href="http://localhost:8000/nlpVisualiser">NLP visulaiser</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="grid-x grid-margin-x" style="padding-top:10%;padding-left:40%;padding-bottom:5%">
+    <div class="large-12 cell">
+        <h4 style="font-size:50px">Linear Regression</h4>
+    </div>
+</div>
+
+
+<center>
+
+<div class="container-fluid">
+<img src="{% static '/images/lr.png'%}" height=400 width=600 ></img>
+</div>
+
+<div class="container-fluid" style="padding-top:5%;padding-left:10%;padding-right:20%;">
+<h4 class="display-4" style="font-size:20px">  Linear regression is perhaps one of the most well known and well understood algorithms in statistics and machine learning.Linear regression is a linear model, e.g. a model that assumes a linear relationship between the input variables (x) and the single output variable (y). More specifically, that y can be calculated from a linear combination of the input variables (x).
+
+When there is a single input variable (x), the method is referred to as simple linear regression. When there are multiple input variables, literature from statistics often refers to the method as multiple linear regression.<br>
+
+Different techniques can be used to prepare or train the linear regression equation from data, the most common of which is called Ordinary Least Squares. It is common to therefore refer to a model prepared this way as Ordinary Least Squares Linear Regression or just Least Squares Regression.
+
+Linear regression is a linear model, e.g. a model that assumes a linear relationship between the input variables (x) and the single output variable (y). More specifically, that y can be calculated from a linear combination of the input variables (x).<br>
+
+When there is a single input variable (x), the method is referred to as simple linear regression. When there are multiple input variables, literature from statistics often refers to the method as multiple linear regression.
+
+Different techniques can be used to prepare or train the linear regression equation from data, the most common of which is called Ordinary Least Squares. It is common to therefore refer to a model prepared this way as Ordinary Least Squares Linear Regression or just Least Squares Regression.
+</h4>
+</div>
+
+<div class="grid-x grid-margin-x" style="padding-top:10%;padding-bottom:5%">
+    <div class="large-12 cell">
+        <h4 style="font-size:40px">Visualisation</h4>
+    </div>
+
+
+
+</div>
+
+
+</center>
+
+<div class="grid-x grid-margin-x" style="padding-top:8%;padding-left:10%">
+    <div class="large-12 cell">
+        <h4 id='californaHousing' >California Housing Price Prediction</h4>
+    </div>
+
+    <div class="large-3 cell">
+        <label>Median income in block</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="medInc" required>
+            <span class="input-group-label">$</span>
+        </div>
+
+
+        <label>Median house age in block</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="houseAge" required>
+            <span class="input-group-label">years</span>
+        </div>
+    </div>
+
+    <div class="large-3 cell">
+        <label>Average number of rooms</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="aveRooms" required>
+        </div>
+
+        <label>Average number of bedrooms</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="aveBedrms" required>
+        </div>
+    </div>
+
+    <div class="large-3 cell">
+        <label>Block population</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="population" required>
+        </div>
+
+        <label>Average house occupancy</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="aveOccup" required>
+        </div>
+    </div>
+
+    <div class="large-3 cell">
+        <label>House block latitude</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="latitude" required>
+        </div>
+
+        <label>House block longitude</label>
+        <div class="input-group">
+            <input type="number" class="input-group-field" id="longitude" required>
+        </div>
+    </div>
+
+    <div class="large-3 cell">
+        <input type="button" class="button expanded" value="Predict Price" id="btnPredictHousePrice">
+    </div>
+
+    <div class="large-3 cell">
+        <img src="img/loading_32.gif" id="housingLoader">
+        <div class="input-group" id="predPriceGroup">
+            <input type="text" class="input-group-field" id="predPrice" placeholder="Predicted price" readonly>
+            <span class="input-group-label">$</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="{% static '/jquery-3.3.1.min.js'%}"></script>
+<script src="{% static '/foundation.min.js'%}"></script>
+<script src="{% static '/displacy-ent.js'%}"></script>
+<script src="{% static '/displacy.js'%}"></script>
+<script src="{% static '/aws-sdk-2.283.1.min.js'%}"></script>
+<script src="{% static '/Chart.min.js'%}"></script>
+<script src="{% static '/app.js'%}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>

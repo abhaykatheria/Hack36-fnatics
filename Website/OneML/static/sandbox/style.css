@@ -1,0 +1,21 @@
+h1, h2, p {
+	text-align: center;
+}
+
+#plots, #stats {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center
+}
+
+div div {
+	margin: 8px;
+}
+
+#buttons {
+	text-align: center;
+}
+
+button {
+	margin: 8px;
+}
