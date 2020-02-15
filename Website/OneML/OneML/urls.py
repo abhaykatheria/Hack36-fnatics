@@ -26,6 +26,8 @@ urlpatterns = [
     path('imageClassification/',views.imageClassification),
     path('nlpVisualiser/',views.nlpVisuliser),
     path('thug/',views.thug),
-    path('save_image/',views.save_image,name='save_image'),
+    path('thug/save_image/',views.save_image,name='save_image'),
+    path('DCE/',views.DCE),
+    path('DCE/save_image',views.DCE_image),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -21,7 +21,7 @@
         <p class="lead">
             <a class="btn btn-info btn-lg btn-md" href="#camera" role="#">go now</a>
         </p>
-    </div>
+    </div>  
 
     <div class="jumbotron paral paralsec1" id="camera">
         <center>
@@ -37,12 +37,12 @@
         <center>
             <div class="container-fluid">
                 <div id="rdiv" height="640" width="320">
-                    <img class="img-fluid" src="" alt="Chania" width="320" height="640" id='bigpic'> 
+                    <img class="img-fluid" src=""  width="320" height="640" id='bigpic'> 
                 </div>
                 <div id="results" class="results"></div>
                 <br>
                 <br>
-                <a href="/site_media/webcamimages/output.jpg" class="btn btn-success btn-lg">
+                <a href="http://localhost:8000/site_media/webcamimages/output.jpg" class="btn btn-success btn-lg">
                     <span class="glyphicon glyphicon-download"></span>download
                 </a>
                 &nbsp;&nbsp;&nbsp;
@@ -90,6 +90,11 @@
         function someFunc() {
 
             take_snapshot();
+            var delayInMilliseconds = 5000; //1 second
+
+            setTimeout(function () {
+                //your code to be executed after 1 second
+            }, delayInMilliseconds);
             saveSnap();
             var delayInMilliseconds = 5000; //1 second
 
@@ -103,7 +108,7 @@
 
         function view_result() {
             document.getElementById('bigpic').src = "";
-            var pic = "site_media/webcamimages/output.jpg";
+            var pic = "http://localhost:8000/site_media/webcamimages/output.jpg";
             document.getElementById('bigpic').src = pic;
             console.log("main heroine hu");
             document.getElementById('bigpic').style.display = 'block';
