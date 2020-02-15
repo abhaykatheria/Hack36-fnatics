@@ -11,6 +11,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static '/foundation.min.css'%}">
     <link rel="stylesheet" href="{% static '/app.css'%}">
+
+
+<!-- sandbox dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+
+	<script src="{% static '/sandbox/math.min.js'%}"></script>
+	
+	<script src="{% static '/sandbox/dot.js'%}"></script>
+	<script src="{% static '/sandbox/stats.js'%}"></script>
+	
+	<script src="{% static '/sandbox/main.js'%}"></script>
+	<script src="{% static '/sandbox/diagnostics.js'%}"></script>
+	
+	<script src="{% static '/sandbox/regression.js'%}"></script>
+	<script src="{% static '/sandbox/sketch.js'%}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static '/sandbox/style.css'%}">
+
+
 </head>
 <style>
 body {
@@ -84,6 +104,23 @@ Different techniques can be used to prepare or train the linear regression equat
         <h4 style="font-size:40px">Visualisation</h4>
     </div>
 
+<div id="plots"  style="padding-top:5%;padding-left:20%">
+	<div id="main">
+		<h2>Scatter plot</h2>
+	</div>
+	<div id="diagnostics">
+		<h2>Residual plot</h2>
+	</div>
+</div>
+
+<div id="stats">
+	<div id="reg_line"></div>
+	<div id="means"></div>
+</div>
+
+<p>Move the points by clicking on them.</p>
+
+<div id="buttons"></div>
 
 
 </div>
@@ -92,8 +129,9 @@ Different techniques can be used to prepare or train the linear regression equat
 </center>
 
 <div class="grid-x grid-margin-x" style="padding-top:8%;padding-left:10%">
+    
     <div class="large-12 cell">
-        <h4 id='californaHousing' >California Housing Price Prediction</h4>
+        <h4 style="font-size:50px" >California Housing Price Prediction</h4>
     </div>
 
     <div class="large-3 cell">

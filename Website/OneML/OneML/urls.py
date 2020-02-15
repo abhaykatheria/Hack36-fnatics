@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from . import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +25,7 @@ urlpatterns = [
     path('linearRegression/',views.linearRegression),
     path('imageClassification/',views.imageClassification),
     path('nlpVisualiser/',views.nlpVisuliser),
-]
+    path('thug/',views.thug),
+    path('save_image/',views.save_image,name='save_image'),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
