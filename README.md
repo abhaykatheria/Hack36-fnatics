@@ -5,6 +5,7 @@ Hack 36
 Topic: Smart Education 
 
 Idea: An App which is a social platform for all machine learning enthusiast where they can login and post things about machine learning and can read other's post. We will make a website which will help users to visualise machine learning algorithms like Linear Regression, Neural Networks, Image Segmentation etc. 
+
 ## Features of App 
 1. A social platform which will allow user to login via email. 
 2. Users can post images and text. 
@@ -14,3 +15,10 @@ Idea: An App which is a social platform for all machine learning enthusiast wher
 6. A fun ML section which will use ML-Kit and user will be able to use machine learning feature to classify images and many more.
 
 Basically it will be social app encorporated with machine learning features.
+
+## Features of Website
+1. Visualisation of different machine learning models
+2. Live Examples to test
+3. Some cool Ml powered filters
+4. Powered by AWS Lambda Functions and Serverless
+5. Preprocessing of Data
