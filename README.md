@@ -23,3 +23,26 @@ Basically it will be social app encorporated with machine learning features.
 4. Some cool Ml powered filters
 5. Powered by AWS Lambda Functions and Serverless
 6. Preprocessing of Data
+
+## How to Run this :
+
+### For App: 
+
+1. Install expo on mobile and login into that.
+2. Clone the project from the github using "git clone https://github.com/abhaykatheria/Hack36-fnatics.git"
+3. Now change the directory to the root folder. i.e "Hack36-fnatics/App"
+4. Now run command "npm install" to install all the dependencies.
+5. Now enable the USB Debugging of your mobile phone. (This can be achieved by enabling the developer mode)
+6. Now run command "npm start".
+7. Now will see and expo client server opened in your default browser.
+8. Connect your mobile via usb to the system.
+9. Install adb first onto your system and run command 'adb devices' to see whether your mobile is connected properly or not.
+10. Now go to the page on browser where expo client was opened.
+11. Change the portal from LAN to Local and then run on android or ios depending upon your device.
+12. This way app build will be successful.
+
+### For Website:
+
+1. Go to the directory Website/OneMl of above cloned repo.
+2. Simply run " python manage.py runserver ".
+
