@@ -18,16 +18,16 @@ from django.urls import path
 from django.conf import settings
 from . import views
 from django.conf.urls.static import static
+from upload import views as up_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
     path('linearRegression/',views.linearRegression),
-    path('imageClassification/',views.imageClassification),
     path('nlpVisualiser/',views.nlpVisuliser),
+    path('xor/',views.xor),
+    path('game/',views.game),
     path('thug/',views.thug),
     path('thug/save_image/',views.save_image,name='save_image'),
-    path('DCE/',views.DCE),
-    path('DCE/save_image',views.DCE_image),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

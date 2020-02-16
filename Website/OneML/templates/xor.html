@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learning XOR</title>
+    {% load static %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+
+	<script src="{% static '/sandbox/math.min.js'%}"></script>
+
+	<script src="{% static '/sandbox/neural/sketch.js'%}"></script>
+	<script src="{% static '/sandbox/neural/matrix_math.js'%}"></script>
+	<script src="{% static '/sandbox/neural/draw_network.js'%}"></script>
+	<script src="{% static '/sandbox/neural/draw_prediction.js'%}"></script>
+</head>
+<body>
+	<center>
+		<h1>Learning XOR with a neural net</h1>
+		<div id="canvas"></div>
+	
+		<div id="learning_rate">Learning rate: </div>
+		<div id="prediction_size">Prediction window size: </div>
+		<br>
+		<div id="reset"></div>
+		<br>
+		<div>
+		<p>Activations: White is zero, black is one.</p>
+		<p>Weights and biases: Red are positive, blue are negative.</p>
+		<p>The active data point, for which the activations are shown, is green.</p>
+		<p>Press 'x' and 'y' to toggle active data point</p></div>
+	</center>
+</body>
+</html>

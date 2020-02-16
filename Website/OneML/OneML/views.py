@@ -23,23 +23,22 @@ def linearRegression(request):
    template = loader.get_template('LR.html') # getting our template  
    return HttpResponse(template.render())
 
-def imageClassification(request):  
-   template = loader.get_template('IC.html') # getting our template  
-   return HttpResponse(template.render())
 
 def nlpVisuliser(request):  
    template = loader.get_template('NLP.html') # getting our template  
    return HttpResponse(template.render())  
 
-def thug(request):
+def xor(request):  
+   template = loader.get_template('xor.html') # getting our template  
+   return HttpResponse(template.render())  
+
+def game(request):  
+   template = loader.get_template('game.html') # getting our template  
+   return HttpResponse(template.render()) 
+
+def thug(request):  
    template = loader.get_template('thug.html') # getting our template  
-   return HttpResponse(template.render())  
-
-def DCE(request):
-   template = loader.get_template('DCE.html') # getting our template  
-   return HttpResponse(template.render())  
-
-
+   return HttpResponse(template.render()) 
 
 @csrf_exempt
 @csrf_exempt
@@ -50,8 +49,8 @@ def save_image(request):
     settings.MEDIA_ROOT + '/webcamimages/someimage.jpg'
     if request.method == 'POST':
         # save it somewhere
-        if os.path.exists(settings.MEDIA_ROOT + '/webcamimages/someimage.jpg'):
-            os.remove(settings.MEDIA_ROOT + '/webcamimages/someimage.jpg')
+        if os.path.exists(os.path.join(settings.MEDIA_ROOT , '/webcamimages/someimage.jpg')):
+            os.remove(os.path.join(settings.MEDIA_ROOT ,'/webcamimages/someimage.jpg'))
             print("delete th previous image")
         if os.path.exists(settings.MEDIA_ROOT + '/webcamimages/output.jpg'):  
             os.remove(settings.MEDIA_ROOT + '/webcamimages/output.jpg')
@@ -107,7 +106,7 @@ class Segmentation:
         self.km.fit(self.pixel_array)
            
     #this program helps to extract out the dominant colors from the image    
-    def dominant_colors(self):
+    '''def dominant_colors(self):
         #taking out the centers
         self.centers=np.array(self.km.cluster_centers_,dtype='uint8')
         self.colors=[]
@@ -124,7 +123,7 @@ class Segmentation:
             color_array[:,:,:]=current_center
             plt.imshow(color_array)
             var+=1
-        plt.show()
+        plt.show()'''
         
     #this fucntion draws the image with the given dominant colors
     def draw_image(self):
@@ -137,15 +136,16 @@ class Segmentation:
             new_image[i]=self.centers[pred[i]]
         #new_image is reshaped into original size in order to get whole image together
         new_image=new_image.reshape(self.orginal_size)
-        plt.axis("off")
-        plt.title("No. of colors : "+str(self.dom_colors))
-        plt.imshow(new_image)
-        plt.show()
+        cv2.imwrite(settings.MEDIA_ROOT +'/webcamimages/DCEoutput.jpg',new_image)
+        
 
+@csrf_exempt
+@csrf_exempt
 
 def DCE_image(request):
    if request.method == 'POST':
         # save it somewhere
+        print("mothafuckka")
         print(settings.MEDIA_ROOT + '/webcamimages/DCEinput.jpg')
         if os.path.exists(os.path.join(settings.MEDIA_ROOT ,'webcamimages/DCEinput.jpg')):
             os.remove(os.path.join(settings.MEDIA_ROOT ,'webcamimages/DCEinput.jpg'))
@@ -163,3 +163,5 @@ def DCE_image(request):
         f.close()
         print('new image has been uploaded')
         img=cv2.imread(settings.MEDIA_ROOT + '/webcamimages/DCEinput.jpg')
+        IS=Segmentation(img,2)
+        IS.draw_image()
