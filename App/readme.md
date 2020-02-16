@@ -13,4 +13,11 @@ Now one of the most promising thing that can be achieved by this app is that Dat
 
 They can give the opportunity to the others on the basis of their performance and if they are new then they can be judged on the basis their best repos of the github.
 
-Here are few screenshots of the app :
+Here are few screenshots of the app :  
+<img src="https://github.com/abhaykatheria/Hack36-fnatics/blob/master/screenshots/AddPost.jpg" width=250 height=400 hspace="10"  title="Start Game Screen" alt="Start Game Screen"/>
+<img src="https://github.com/abhaykatheria/Hack36-fnatics/blob/master/screenshots/AlgoWeb.jpg" width=250 height=400 hspace="10"  title="Start Game Screen" alt="Start Game Screen"/>
+<img src="https://github.com/abhaykatheria/Hack36-fnatics/blob/master/screenshots/AllTopics.jpg" width=250 height=400 hspace="10"  title="Start Game Screen" alt="Start Game Screen"/>
+<img src="https://github.com/abhaykatheria/Hack36-fnatics/blob/master/screenshots/GalleryCrop.jpg" width=250 height=400 hspace="10"  title="Start Game Screen" alt="Start Game Screen"/>
+<img src="https://github.com/abhaykatheria/Hack36-fnatics/blob/master/screenshots/Profile.jpg" width=250 height=400 hspace="10"  title="Start Game Screen" alt="Start Game Screen"/>
+<img src="https://github.com/abhaykatheria/Hack36-fnatics/blob/master/screenshots/Projects.jpg" width=250 height=400 hspace="10"  title="Start Game Screen" alt="Start Game Screen"/>
+
