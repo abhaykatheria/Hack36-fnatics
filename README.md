@@ -19,6 +19,7 @@ Basically it will be social app encorporated with machine learning features.
 ## Features of Website
 1. Visualisation of different machine learning models
 2. Live Examples to test
-3. Some cool Ml powered filters
-4. Powered by AWS Lambda Functions and Serverless
-5. Preprocessing of Data
+3. Provide API's for the ML model
+4. Some cool Ml powered filters
+5. Powered by AWS Lambda Functions and Serverless
+6. Preprocessing of Data
